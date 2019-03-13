@@ -1,0 +1,24 @@
+// Palate color
+$PL-Color-1: #CDB3D6; //rgb(205,179,214)
+$PL-Color-2: #6A4D83; //rgb(106,77,131)
+$PL-Color-3: #422543; //rgb(66,37,67)
+$PL-Color-4: #7D3A5B; //rgb(125,58,91)
+$PL-Color-5: #A4AD9A; //rgb(164,173,154)
+$PL-Color-6: #CFD5C7; //rgb(207,213,199)
+
+$White: #FFF;
+
+$Background-color-level-0: rgba(255, 255, 255, 0.4); // Body
+$Background-Color-Level-1: rgba(207, 213, 199, 0.6); // Site Content
+$Background-Color-Level-2: rgba(255, 255, 255, 0.2); // Card
+
+$PrimaryColor: $PL-Color-3;
+$SecondColor: $PL-Color-4;
+
+$Shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+         0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+//Fonts
+$PrimaryFont: 'Poppins', sans-serif;
+
+

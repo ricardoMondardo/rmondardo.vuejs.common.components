@@ -1,0 +1,6 @@
+@mixin backgroud-gradiend-1($FistColor, $secondColor) {
+  background: $FistColor;
+  background: -webkit-linear-gradient(top right, $FistColor, $secondColor);
+  background: -moz-linear-gradient(top right, $FistColor, $secondColor);
+  background: linear-gradient(top right, $FistColor, $secondColor);
+}

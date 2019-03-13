@@ -1,0 +1,12 @@
+.input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid white;
+  padding: 15px 5px;
+
+  &:focus {
+    background: none;
+    border-bottom: 1px solid $PL-Color-3;
+  }
+
+}
