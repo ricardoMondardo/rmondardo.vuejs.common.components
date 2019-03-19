@@ -7,8 +7,8 @@ fractal.set('project.title', 'Component');
 fractal.set('project.version', 'v1.0');
 fractal.set('project.author', 'Ricardo Brina Mondardo');
 
-fractal.web.set('static.path', __dirname + '/build');
-fractal.web.set('builder.dest', 'dist');
+fractal.web.set('static.path', __dirname + '/dist');
+fractal.web.set('builder.dest', __dirname + '/docs');
 
 fractal.docs.set('path', `${__dirname}/fractal/docs`);
 fractal.components.set('path', `${__dirname}/fractal/components`);
