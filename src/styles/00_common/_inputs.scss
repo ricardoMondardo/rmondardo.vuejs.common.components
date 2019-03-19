@@ -1,12 +1,29 @@
-.input {
-  border: none;
-  background: none;
-  border-bottom: 1px solid white;
-  padding: 15px 5px;
+.c-field-input {
+  height: 65px;
+  text-align: center;
+  padding: 5px 1px;
 
-  &:focus {
+  & > input {
+    border: none;
     background: none;
-    border-bottom: 1px solid $PL-Color-3;
+    border-bottom: 1px solid white;
+    padding: 15px 5px;
+
+    &:focus {
+      background: none;
+      border-bottom: 1px solid $FocusColor;
+    }
+
+  }
+
+  &--error {
+    color: $ErrorColor;
+
+    & > input {
+      color: $ErrorColor;
+      border-bottom: 1px solid $ErrorColor;
+    }
+
   }
 
 }

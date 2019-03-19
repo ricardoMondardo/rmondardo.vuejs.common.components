@@ -6,12 +6,14 @@ const { VueLoaderPlugin } = require('vue-loader')
 //
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, './src/entries/main.js'),
-    mainTests: path.resolve(__dirname, './src/entries/mainTests.js')
+    componets: path.resolve(__dirname, './src/entries/componets.js')
   },
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    library: 'libraryName',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   resolve: {
     extensions: ['.js', '.json', '.vue'],
