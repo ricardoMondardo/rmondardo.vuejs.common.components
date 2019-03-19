@@ -38,5 +38,5 @@ Vue.use(CommonComps)
 <x-input-email> <x-input-email />
 ```
 
-```All components
+All components
 https://ricardomondardo.github.io/rmondardo.vuejs.common.components/index.html
