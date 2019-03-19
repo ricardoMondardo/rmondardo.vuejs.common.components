@@ -1,5 +1,5 @@
 ---
-title: YourProjectName
+title: Common components library
 ---
 
-This set of pages includes all components the YourProjectName website is build with. Atomic based design is used.
+This set of common components, feel free to use them.
