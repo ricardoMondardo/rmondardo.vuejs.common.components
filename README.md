@@ -1,4 +1,4 @@
-# vue-clock-simple
+# vuejs-commons-comps
 
 A Vue common componets library.
 
@@ -28,7 +28,7 @@ import CommonComps from 'rmondardo-vuejs-commons-comps'
 
 ## Usage
 
-Once installed, it can be used s:
+Once installed, it can be used e.g:
 
 ```js
 Vue.use(CommonComps)
