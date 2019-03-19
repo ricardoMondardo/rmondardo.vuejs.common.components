@@ -7,7 +7,6 @@ import '../styles/main.scss'
 const install = function(Vue) {
   if (install.installed) return;
   install.installed = true;
-  console.log(Components)
   Components.forEach((component) => {
     Vue.component(component.name, component)
   })

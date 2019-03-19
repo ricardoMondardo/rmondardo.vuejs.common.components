@@ -4,10 +4,12 @@
   padding: 5px 1px;
 
   & > input {
+    text-align: center;
     border: none;
     background: none;
     border-bottom: 1px solid white;
     padding: 15px 5px;
+    border-bottom: 1px solid $FieldBorderColor;
 
     &:focus {
       background: none;

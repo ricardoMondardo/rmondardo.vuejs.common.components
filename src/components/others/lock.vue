@@ -1,10 +1,5 @@
 <template>
-  <div v-if="pLock">
-    <div class="c-lock-icon" />
-  </div>
-  <div v-else>
-    <div class="c-unlock-icon"></div>
-  </div>
+  <div v-bind:class="[ pLock ? 'c-lock-icon' : 'c-unlock-icon' ]" />
 </template>
 
 <script>
