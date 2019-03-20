@@ -1,5 +1,5 @@
 <template>
-  <div class="lds-rippl"><div></div><div></div></div>
+  <div class="c-spinner"><div></div><div></div></div>
 </template>
 
 <script>

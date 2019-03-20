@@ -1,7 +1,8 @@
 <template>
   <button style="border: none; background: none;">
-    <div class="c-button-hamburger"
-          v-on:click="click" >
+    <div
+      class="c-button-hamburger"
+      v-on:click="animation" >
       <div class="c-button-hamburger__bar1"></div>
       <div class="c-button-hamburger__bar2"></div>
       <div class="c-button-hamburger__bar3"></div>
@@ -18,7 +19,7 @@ export default {
     }
   },
   methods: {
-    click: function(e) {
+    animation: function(e) {
 
       this.state = !this.state
       const parent = e.target.children.length > 0 ? e.target : e.target.parentElement
@@ -34,6 +35,9 @@ export default {
           parent.children[2].classList.remove('c-button-hamburger__bar3--on')
         }
       }
+
+      this.$emit('click', e)
+
     }
   }
 }

@@ -1,12 +1,12 @@
 <template>
-  <div v-bind:class="[ pLock ? 'c-lock-icon' : 'c-unlock-icon' ]" />
+  <div v-bind:class="[ pUnlock ? 'c-unlock-icon' : 'c-lock-icon' ]" />
 </template>
 
 <script>
 export default {
   name: "x-lock",
   props: {
-    pLock: {
+    pUnlock: {
       type: Boolean,
       default: false
     }

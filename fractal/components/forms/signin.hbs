@@ -1,0 +1,14 @@
+<x-signin-form
+  v-on:signin="dosignin"
+  v-on:error="doerror"
+  :pMinLength=9
+  pMessageError="Password should have at least 9 chars" />
+
+<script>
+  const dosignin = function() {
+    console.log('Do a login')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
+  }
+</script>

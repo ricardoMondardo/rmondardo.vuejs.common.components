@@ -1,0 +1,13 @@
+<x-login-form
+  v-on:login="dologin"
+  v-on:error="doerror" />
+
+<script>
+  const dologin = function() {
+    console.log('Do a login')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
+  }
+</script>
+

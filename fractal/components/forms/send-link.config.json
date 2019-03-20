@@ -1,0 +1,7 @@
+{
+  "context": {
+        "Value": "Just a value"
+  },
+  "notes": "These are some **notes** about the component",
+  "status": "wip"
+}

@@ -14,7 +14,7 @@ Include the script file after vue e.g.:
 
 ```html
 <script type="text/javascript" src="node_modules/vuejs/dist/vue.min.js"></script>
-<script type="text/javascript" src="node_modules/componets.bundle.js"></script>
+<script type="text/javascript" src="node_modules/dist/components.bundle"></script>
 <script type="text/javascript">
   Vue.use(VueClock);
 </script>
@@ -23,7 +23,7 @@ Include the script file after vue e.g.:
 ### Module
 
 ```js
-import CommonComps from 'rmondardo-vuejs-commons-comps'
+import CommonComps from 'rmondardo-vuejs-commons-comps/dist/components.bundle'
 ```
 
 ## Usage

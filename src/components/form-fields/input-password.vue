@@ -1,12 +1,14 @@
 <template>
-  <div class="c-field-input"
-      v-bind:class="[ error ? 'c-field-input--error' : '' ]">
-    <input type="password"
-          :placeholder="pPlaceHolder"
-          @input="updateSelf($event.target.value)"
-          @focus="handleFocus()"
-          @blur="handleBlur($event.target.value)"
-          @keyup.enter="$emit('enter')" >
+  <div
+    class="c-field-input"
+    v-bind:class="[ error ? 'c-field-input--error' : '' ]">
+    <input
+      type="password"
+      :placeholder="pPlaceHolder"
+      @input="updateSelf($event.target.value)"
+      @focus="handleFocus()"
+      @blur="handleBlur($event.target.value)"
+      @keyup.enter="$emit('enter')" >
     <div v-if="error">
       {{ pMessageError }}
     </div>
@@ -24,6 +26,14 @@ export default {
       type: String,
       default: 'Type your password'
     },
+    pDoValidation: {
+      type: Boolean,
+      default: false
+    },
+    pMinLength: {
+      type: Number,
+      default: 6
+    },
     pMessageError: {
       type: String,
       default: 'Password should have at least 6 chars'
@@ -39,7 +49,10 @@ export default {
       this.error = false
     },
     handleBlur(value) {
-      if ( value.length > 0 && !util.validatePassword(value, 5)) {
+
+      if (!this.pDoValidation) return
+
+      if ( value.length > 0 && !util.validatePassword(value, this.pMinLength - 1)) {
         this.error = true;
       }
     },

@@ -1,2 +1,9 @@
-<x-buttonhamburger> </x-buttonhamburger>
+<x-buttonhamburger v-on:click="click"/>
 
+<script>
+  var count = 0
+  const click = function() {
+    count++
+    console.log(`Click ${count}`)
+  }
+</script>

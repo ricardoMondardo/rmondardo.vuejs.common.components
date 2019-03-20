@@ -1,11 +1,13 @@
 <template>
-  <div class="c-field-input"
-      v-bind:class="[ error ? 'c-field-input--error' : '' ]">
-    <input type="text"
-          :placeholder="pPlaceHolder"
-          @input="updateSelf($event.target.value)"
-          @focus="handleFocus()"
-          @blur="handleBlur($event.target.value)" >
+  <div
+    class="c-field-input"
+    v-bind:class="[ error ? 'c-field-input--error' : '' ]">
+    <input
+      type="text"
+      :placeholder="pPlaceHolder"
+      @input="updateSelf($event.target.value)"
+      @focus="handleFocus()"
+      @blur="handleBlur($event.target.value)" >
     <div v-if="error">
       {{ pMessageError }}
     </div>

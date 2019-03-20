@@ -1,0 +1,12 @@
+<x-send-active-link-form
+  v-on:sendactivelink="dosendlink"
+  v-on:error="doerror" />
+
+<script>
+  const dosendlink = function() {
+    console.log('Send a link')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
+  }
+</script>
