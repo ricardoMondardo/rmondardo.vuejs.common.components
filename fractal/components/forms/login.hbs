@@ -1,5 +1,13 @@
 <x-login-form
   v-on:login="dologin"
+  v-on:error="doerror" >
+</x-login-form>
+
+<x-login-form
+  p-place-holder-email="Email *"
+  p-place-holder-password="Pass *"
+  p-text-button="Log in"
+  v-on:login="dologin"
   v-on:error="doerror" />
 
 <script>

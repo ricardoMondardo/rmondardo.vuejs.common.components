@@ -1,17 +1,17 @@
 <template>
   <div class="c-login-form">
     <x-input-email
-      pPlaceHolder="Email"
+      :pPlaceHolder="pPlaceHolderEmail"
       v-model="email"  />
 
     <x-input-password
-      pPlaceHolder="Password"
+      :pPlaceHolder="pPlaceHolderPassword"
       v-model="password"
       v-on:enter="login" />
 
     <button  class="c-button c-button--large c-button--color"
              v-on:click="login" >
-      Log in
+      {{ pTextButton }}
     </button>
   </div>
 </template>
@@ -19,6 +19,20 @@
 <script>
 export default {
   name: 'x-login-form',
+  props: {
+    pPlaceHolderEmail: {
+      type: String,
+      default: "Type your email"
+    },
+    pPlaceHolderPassword: {
+      type: String,
+      default: "Type your password"
+    },
+    pTextButton: {
+      type: String,
+      default: "Log in"
+    }
+  },
   data: () => {
     return {
       email: "",

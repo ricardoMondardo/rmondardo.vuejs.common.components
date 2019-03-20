@@ -1,11 +1,11 @@
 <template>
   <div class="c-login-form">
-    <x-input-email pPlaceHolder="Email"
+    <x-input-email :pPlaceHolder="pPlaceHolderField"
                   v-model="email"  />
 
     <button  class="c-button c-button--large c-button--color"
              v-on:click="sendActiveLink" >
-      Send link
+      {{ pTextButton }}
     </button>
   </div>
 </template>
@@ -15,9 +15,13 @@
 export default {
   name: 'x-send-active-link-form',
   props: {
-    pPlaceHolder: {
+    pPlaceHolderField: {
       type: String,
       default: "Type something"
+    },
+    pTextButton: {
+      type: String,
+      default: "Send link"
     }
   },
   data: () => {
