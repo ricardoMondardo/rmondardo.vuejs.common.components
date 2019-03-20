@@ -8,6 +8,10 @@ A Vue common componets library.
 npm i rmondardo-vuejs-commons-comps
 ```
 
+### Npm
+
+https://www.npmjs.com/package/rmondardo-vuejs-commons-comps
+
 ### Browser
 
 Include the script file after vue e.g.:
