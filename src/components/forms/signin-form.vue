@@ -5,14 +5,14 @@
       v-model="email"  />
 
     <x-input-password
-      pPlaceHolder="password"
+      pPlaceHolder="Password"
       pDoValidation
       :pMinLength="pMinLength"
       :pMessageError="pMessageError"
       v-model="password" />
 
     <x-input-password
-      pPlaceHolder="type your password again"
+      pPlaceHolder="Type your password again"
       v-model="repassword"
       v-on:enter="signin" />
 

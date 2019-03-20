@@ -5,7 +5,7 @@
       v-model="email"  />
 
     <x-input-password
-      pPlaceHolder="password"
+      pPlaceHolder="Password"
       v-model="password"
       v-on:enter="login" />
 
