@@ -3,7 +3,7 @@ import InputPassword from './form-fields/input-password'
 
 import FormLogin from './forms/login-form'
 import FormSignin from './forms/signin-form'
-import FormSendLink from './forms/send-active-link-form'
+import FormSendLink from './forms/send-link-by-email-form'
 
 import ButtonHamburger from './button/button-hamburger'
 import Lock from './others/lock'

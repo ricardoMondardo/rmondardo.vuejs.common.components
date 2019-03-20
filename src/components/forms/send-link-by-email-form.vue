@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'x-send-active-link-form',
+  name: 'x-send-link-by-email-form',
   props: {
     pPlaceHolderField: {
       type: String,
