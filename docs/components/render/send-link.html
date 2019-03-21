@@ -1,0 +1,23 @@
+
+
+<x-send-link-by-email-form
+  v-on:sendactivelink="dosendlink"
+  v-on:error="doerror" >
+</x-send-link-by-email-form>
+
+<x-send-link-by-email-form
+  p-place-holder-field="Email"
+  p-text-button="Send me a link"
+  v-on:sendactivelink="dosendlink"
+  v-on:error="doerror" >
+</x-send-link-by-email-form>
+
+<script>
+  const dosendlink = function() {
+    console.log('Send a link')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
+  }
+</script>
+

@@ -11,13 +11,24 @@
    <div
     id="vue-container"
     style="text-align:center">
-    <x-buttonhamburger v-on:click="click"/>
+    <x-send-link-by-email-form
+  v-on:sendactivelink="dosendlink"
+  v-on:error="doerror" >
+</x-send-link-by-email-form>
+
+<x-send-link-by-email-form
+  p-place-holder-field="Email"
+  p-text-button="Send me a link"
+  v-on:sendactivelink="dosendlink"
+  v-on:error="doerror" >
+</x-send-link-by-email-form>
 
 <script>
-  var count = 0
-  const click = function() {
-    count++
-    console.log(`Click ${count}`)
+  const dosendlink = function() {
+    console.log('Send a link')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
   }
 </script>
 

@@ -1,6 +1,6 @@
 {
   "name": "rmondardo-vuejs-commons-comps",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Those are a few common components",
   "author": "Ricardo Brina Mondardo",
   "main": "./build/main.bundle.js",

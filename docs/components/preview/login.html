@@ -11,14 +11,26 @@
    <div
     id="vue-container"
     style="text-align:center">
-    <div class="row">
-  <x-lock />
-</div>
+    <x-login-form
+  v-on:login="dologin"
+  v-on:error="doerror" >
+</x-login-form>
 
+<x-login-form
+  p-place-holder-email="Email *"
+  p-place-holder-password="Pass *"
+  p-text-button="Log in"
+  v-on:login="dologin"
+  v-on:error="doerror" />
 
-
-
-
+<script>
+  const dologin = function() {
+    console.log('Do a login')
+  }
+  const doerror = function(msg) {
+    console.log(`Error msg: ${msg}`)
+  }
+</script>
 
 
    </div>

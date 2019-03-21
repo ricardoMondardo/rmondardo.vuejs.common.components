@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Lock | Component</title>
+<title>Login | Component</title>
 
 </head>
 <body>
@@ -52,14 +52,14 @@
     
     
 
-<div class="Pen" data-behaviour="pen" id="pen-ec4d0484118dcaa43533329e0ffea498">
+<div class="Pen" data-behaviour="pen" id="pen-6629fd9417804eb883b6356d7714bf00">
 
     
 
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
-        <a class="Pen-previewLink" href="../preview/lock.html" title="Component preview">
-            Lock
+        <a class="Pen-previewLink" href="../preview/login.html" title="Component preview">
+            Login
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -79,14 +79,14 @@
 </div>
 
 
-    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-ec4d0484118dcaa43533329e0ffea498">
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-6629fd9417804eb883b6356d7714bf00">
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
              <iframe
                 class="Preview-iframe"
                 data-role="window"
-                src="../preview/lock.html"
+                src="../preview/login.html"
                 sandbox="allow-same-origin allow-scripts allow-forms"
                  style=""
                 marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
@@ -101,7 +101,7 @@
     <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
 
     <div class="Pen-panel Pen-info" data-role="info">
-    <div class="Browser" data-behaviour="browser" id="browser-ec4d0484118dcaa43533329e0ffea498">
+    <div class="Browser" data-behaviour="browser" id="browser-6629fd9417804eb883b6356d7714bf00">
 
     
 
@@ -110,19 +110,19 @@
         
         
         <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
-            <a href="#browser-ec4d0484118dcaa43533329e0ffea498-panel-html">HTML</a>
+            <a href="#browser-6629fd9417804eb883b6356d7714bf00-panel-html">HTML</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--view" data-role="tab">
-            <a href="#browser-ec4d0484118dcaa43533329e0ffea498-panel-view">View</a>
+            <a href="#browser-6629fd9417804eb883b6356d7714bf00-panel-view">View</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-ec4d0484118dcaa43533329e0ffea498-panel-context">Context</a>
+            <a href="#browser-6629fd9417804eb883b6356d7714bf00-panel-context">Context</a>
         </li>
         
         
@@ -134,13 +134,13 @@
         
         
         <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-ec4d0484118dcaa43533329e0ffea498-panel-info">Info</a>
+            <a href="#browser-6629fd9417804eb883b6356d7714bf00-panel-info">Info</a>
         </li>
         
         
         
         <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-ec4d0484118dcaa43533329e0ffea498-panel-notes">Notes</a>
+            <a href="#browser-6629fd9417804eb883b6356d7714bf00-panel-notes">Notes</a>
         </li>
         
         
@@ -150,32 +150,59 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-ec4d0484118dcaa43533329e0ffea498-panel-html">
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6629fd9417804eb883b6356d7714bf00-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">x-lock</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">x-login-form</span> <span class="hljs-attr">v-on:login</span>=<span class="hljs-string">"dologin"</span> <span class="hljs-attr">v-on:error</span>=<span class="hljs-string">"doerror"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">x-login-form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">x-login-form</span> <span class="hljs-attr">p-place-holder-email</span>=<span class="hljs-string">"Email *"</span> <span class="hljs-attr">p-place-holder-password</span>=<span class="hljs-string">"Pass *"</span> <span class="hljs-attr">p-text-button</span>=<span class="hljs-string">"Log in"</span> <span class="hljs-attr">v-on:login</span>=<span class="hljs-string">"dologin"</span> <span class="hljs-attr">v-on:error</span>=<span class="hljs-string">"doerror"</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">const</span> dologin = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Do a login'</span>)
+    }
+    <span class="hljs-keyword">const</span> doerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Error msg: <span class="hljs-subst">${msg}</span>`</span>)
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
         
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ec4d0484118dcaa43533329e0ffea498-panel-view">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6629fd9417804eb883b6356d7714bf00-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">x-lock</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">x-login-form</span>
+  <span class="hljs-attr">v-on:login</span>=<span class="hljs-string">"dologin"</span>
+  <span class="hljs-attr">v-on:error</span>=<span class="hljs-string">"doerror"</span> &gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">x-login-form</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">x-login-form</span>
+  <span class="hljs-attr">p-place-holder-email</span>=<span class="hljs-string">"Email *"</span>
+  <span class="hljs-attr">p-place-holder-password</span>=<span class="hljs-string">"Pass *"</span>
+  <span class="hljs-attr">p-text-button</span>=<span class="hljs-string">"Log in"</span>
+  <span class="hljs-attr">v-on:login</span>=<span class="hljs-string">"dologin"</span>
+  <span class="hljs-attr">v-on:error</span>=<span class="hljs-string">"doerror"</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">const</span> dologin = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Do a login'</span>)
+  }
+  <span class="hljs-keyword">const</span> doerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Error msg: <span class="hljs-subst">${msg}</span>`</span>)
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
     </code>
 </div>
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ec4d0484118dcaa43533329e0ffea498-panel-context">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6629fd9417804eb883b6356d7714bf00-panel-context">
     <code class="Code Code--lang-json">
         
             
             <pre>{
-  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>
+  <span class="hljs-attr">"Value"</span>: <span class="hljs-string">"Just a value"</span>
 }</pre>
             
         
@@ -189,11 +216,11 @@
 
 
     
-    <div class="Browser-panel" data-role="tab-panel" id="browser-ec4d0484118dcaa43533329e0ffea498-panel-info">
+    <div class="Browser-panel" data-role="tab-panel" id="browser-6629fd9417804eb883b6356d7714bf00-panel-info">
     <ul class="Meta">
         <li class="Meta-item">
             <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@lock</span>
+            <span class="Meta-value">@login</span>
         </li>
         
         
@@ -204,12 +231,12 @@
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
-                    <li><a data-no-pjax href="../preview/lock.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../preview/login.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
 </a></li>
-                    <li><a data-no-pjax href="../render/lock.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                    <li><a data-no-pjax href="../render/login.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
 </svg>
@@ -219,7 +246,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">fractal\components\others\lock\lock.hbs</span>
+            <span class="Meta-value">fractal\components\forms\login\login.hbs</span>
         </li>
         
         
@@ -227,7 +254,7 @@
 </div>
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-ec4d0484118dcaa43533329e0ffea498-panel-notes">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-6629fd9417804eb883b6356d7714bf00-panel-notes">
     <div class="Prose Prose--condensed">
         
         <p>These are some <strong>notes</strong> about the component</p>
@@ -333,8 +360,8 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="login.html" data-pjax>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Login</span>
                 
 
@@ -541,8 +568,8 @@
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lock.html" data-pjax>
                 <span>Lock</span>
                 
 
