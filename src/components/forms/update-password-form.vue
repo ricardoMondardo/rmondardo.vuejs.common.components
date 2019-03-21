@@ -11,10 +11,10 @@
     <x-input-password
       :pPlaceHolder="pPlaceHolderSecondPassword"
       v-model="repassword"
-      v-on:enter="signin" />
+      v-on:enter="updatepass" />
 
     <button  class="c-button c-button--large c-button--color"
-             v-on:click="signin" >
+             v-on:click="updatepass" >
       {{ pTextButton }}
     </button>
   </div>
@@ -52,7 +52,7 @@ export default {
     }
   },
   methods: {
-    signin: function() {
+    updatepass: function() {
 
       if (this.password.length <= 0) {
         this.$emit('error', "Password cannot be null")
