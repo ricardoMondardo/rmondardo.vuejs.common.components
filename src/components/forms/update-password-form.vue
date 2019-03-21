@@ -1,8 +1,5 @@
 <template>
   <div class="c-form">
-    <x-input-email
-      :pPlaceHolder="pPlaceHolderEmail"
-      v-model="email"  />
 
     <x-input-password
       :pPlaceHolder="pPlaceHolderPassword"
@@ -25,12 +22,8 @@
 
 <script>
 export default {
-  name: 'x-signin-form',
+  name: 'x-update-password-form',
   props: {
-    pPlaceHolderEmail: {
-      type: String,
-      default: "Type your email"
-    },
     pPlaceHolderPassword: {
       type: String,
       default: "Type your password"
@@ -54,18 +47,12 @@ export default {
   },
   data: () => {
     return {
-      email: "",
       password: "",
       repassword: ""
     }
   },
   methods: {
     signin: function() {
-
-      if (this.email.length <= 0) {
-        this.$emit('error', "Email cannot be null")
-        return false
-      }
 
       if (this.password.length <= 0) {
         this.$emit('error', "Password cannot be null")
@@ -77,7 +64,7 @@ export default {
         return false
       }
 
-      this.$emit('signin', this.email, this.password)
+      this.$emit('update', this.email, this.password)
     }
   }
 }

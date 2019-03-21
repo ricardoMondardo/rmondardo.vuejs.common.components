@@ -1,10 +1,10 @@
 <template>
-  <div class="c-login-form">
+  <div class="c-form">
     <x-input-email :pPlaceHolder="pPlaceHolderField"
                   v-model="email"  />
 
     <button  class="c-button c-button--large c-button--color"
-             v-on:click="sendActiveLink" >
+             v-on:click="sendLink" >
       {{ pTextButton }}
     </button>
   </div>
@@ -30,14 +30,14 @@ export default {
     }
   },
   methods: {
-    sendActiveLink: function() {
+    sendLink: function() {
 
       if (this.email.length <= 0) {
         this.$emit('error', "Email cannot be null")
         return false
       }
 
-      this.$emit('sendactivelink', this.email)
+      this.$emit('sendLink', this.email)
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="c-login-form">
+  <div class="c-form">
     <x-input-email
       :pPlaceHolder="pPlaceHolderEmail"
       v-model="email"  />
