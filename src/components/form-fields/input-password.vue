@@ -4,7 +4,7 @@
     v-bind:class="[ error ? 'c-field-input--error' : '' ]">
     <input
       type="password"
-      :placeholder="pPlaceHolder"
+      :placeholder="placeHolder"
       @input="updateSelf($event.target.value)"
       @focus="handleFocus()"
       @blur="handleBlur($event.target.value)"
@@ -22,19 +22,19 @@ const util = require('../../util/validations.js')
 export default {
   name: 'x-input-password',
   props: {
-    pPlaceHolder: {
+    placeHolder: {
       type: String,
       default: 'Type your password'
     },
-    pDoValidation: {
+    doValidation: {
       type: Boolean,
       default: false
     },
-    pMinLength: {
+    minLength: {
       type: Number,
       default: 6
     },
-    pMessageError: {
+    messageError: {
       type: String,
       default: 'Password should have at least 6 chars'
     }

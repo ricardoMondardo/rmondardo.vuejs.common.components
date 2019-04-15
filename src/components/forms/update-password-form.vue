@@ -2,20 +2,20 @@
   <div class="c-form">
 
     <x-input-password
-      :pPlaceHolder="pPlaceHolderPassword"
-      pDoValidation
-      :pMinLength="pMinLength"
-      :pMessageError="pMessageError"
+      :placeHolder="placeHolderPassword"
+      doValidation
+      :minLength="minLength"
+      :messageError="messageError"
       v-model="password" />
 
     <x-input-password
-      :pPlaceHolder="pPlaceHolderSecondPassword"
+      :placeHolder="placeHolderSecondPassword"
       v-model="repassword"
       v-on:enter="updatepass" />
 
     <button  class="c-button c-button--large c-button--color"
              v-on:click="updatepass" >
-      {{ pTextButton }}
+      {{ textButton }}
     </button>
   </div>
 </template>
@@ -24,23 +24,23 @@
 export default {
   name: 'x-update-password-form',
   props: {
-    pPlaceHolderPassword: {
+    placeHolderPassword: {
       type: String,
       default: "Type your password"
     },
-    pPlaceHolderSecondPassword: {
+    placeHolderSecondPassword: {
       type: String,
       default: "Type your password"
     },
-    pTextButton: {
+    textButton: {
       type: String,
       default: "Log in"
     },
-    pMinLength: {
+    minLength: {
       type: Number,
       default: 6
     },
-    pMessageError: {
+    messageError: {
       type: String,
       default: 'Password should have at least 6 chars'
     }

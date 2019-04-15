@@ -14,7 +14,7 @@ https://www.npmjs.com/package/rmondardo-vuejs-commons-comps
 
 ### Browser
 
-Include the script file after vue e.g.:
+<!-- Include the script file after vue e.g.:
 
 ```html
 <script type="text/javascript" src="node_modules/vuejs/dist/vue.min.js"></script>
@@ -22,7 +22,7 @@ Include the script file after vue e.g.:
 <script type="text/javascript">
   Vue.use(VueClock);
 </script>
-```
+``` -->
 
 ### Module
 

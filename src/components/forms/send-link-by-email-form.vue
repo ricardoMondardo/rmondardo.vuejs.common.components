@@ -1,11 +1,11 @@
 <template>
   <div class="c-form">
-    <x-input-email :pPlaceHolder="pPlaceHolderField"
+    <x-input-email :placeHolder="placeHolderField"
                   v-model="email"  />
 
     <button  class="c-button c-button--large c-button--color"
              v-on:click="sendLink" >
-      {{ pTextButton }}
+      {{ textButton }}
     </button>
   </div>
 </template>
@@ -15,11 +15,11 @@
 export default {
   name: 'x-send-link-by-email-form',
   props: {
-    pPlaceHolderField: {
+    placeHolderField: {
       type: String,
       default: "Type something"
     },
-    pTextButton: {
+    textButton: {
       type: String,
       default: "Send link"
     }

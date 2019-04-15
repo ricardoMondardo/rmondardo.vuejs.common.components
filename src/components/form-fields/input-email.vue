@@ -4,12 +4,12 @@
     v-bind:class="[ error ? 'c-field-input--error' : '' ]">
     <input
       type="text"
-      :placeholder="pPlaceHolder"
+      :placeholder="placeHolder"
       @input="updateSelf($event.target.value)"
       @focus="handleFocus()"
       @blur="handleBlur($event.target.value)" >
     <div v-if="error">
-      {{ pMessageError }}
+      {{ emailNotValidMessage }}
     </div>
   </div>
 </template>
@@ -21,11 +21,11 @@ const util = require('../../util/validations.js')
 export default {
   name: 'x-input-email',
   props: {
-    pPlaceHolder: {
+    placeHolder: {
       type: String,
       default: 'Type your email'
     },
-    pMessageError: {
+    emailNotValidMessage: {
       type: String,
       default: 'Email is not valid'
     }

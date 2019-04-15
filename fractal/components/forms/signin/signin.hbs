@@ -4,12 +4,12 @@
 </x-signin-form>
 
 <x-signin-form
-  p-place-holder-email="Email *"
-  p-place-holder-password="Pass *"
-  p-place-holder-second-password="Type again Pass *"
-  p-text-button="Sig in"
-  p-message-error="Password should have at least 9 chars"
-  :pMinLength=9
+  place-holder-email="Email *"
+  place-holder-password="Pass *"
+  place-holder-second-password="Type again Pass *"
+  text-button="Sig in *"
+  message-error="Password should have at least 9 chars"
+  :minLength=9
   v-on:signin="dosignin"
   v-on:error="doerror" />
 
